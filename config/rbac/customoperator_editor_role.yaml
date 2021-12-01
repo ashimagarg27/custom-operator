@@ -1,0 +1,24 @@
+# permissions for end users to edit customoperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: customoperator-editor-role
+rules:
+- apiGroups:
+  - replica.example.com
+  resources:
+  - customoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - replica.example.com
+  resources:
+  - customoperators/status
+  verbs:
+  - get

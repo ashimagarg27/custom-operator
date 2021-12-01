@@ -1,0 +1,7 @@
+apiVersion: replica.example.com/v1alpha1
+kind: CustomOperator
+metadata:
+  name: customoperator-sample
+spec:
+  # Add fields here
+  foo: bar

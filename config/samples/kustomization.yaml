@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- replica_v1alpha1_customoperator.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

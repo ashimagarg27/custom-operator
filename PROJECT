@@ -1,0 +1,19 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: custom-operator
+repo: github.com/ashimagarg27/custom-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: replica
+  kind: CustomOperator
+  path: github.com/ashimagarg27/custom-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

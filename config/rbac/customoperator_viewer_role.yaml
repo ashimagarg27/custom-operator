@@ -1,0 +1,20 @@
+# permissions for end users to view customoperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: customoperator-viewer-role
+rules:
+- apiGroups:
+  - replica.example.com
+  resources:
+  - customoperators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - replica.example.com
+  resources:
+  - customoperators/status
+  verbs:
+  - get
