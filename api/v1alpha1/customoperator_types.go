@@ -29,7 +29,8 @@ type CustomOperatorSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of CustomOperator. Edit customoperator_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// Foo string `json:"foo,omitempty"`
+	Replicas int32 `json:"replicas"`
 }
 
 // CustomOperatorStatus defines the observed state of CustomOperator
