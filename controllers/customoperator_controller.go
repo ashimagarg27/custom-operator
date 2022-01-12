@@ -146,7 +146,7 @@ func (r *CustomOperatorReconciler) createDeployment(instance *replicav1alpha1.Cu
 							Ports: []corev1.ContainerPort{
 								{
 									Name:          "nginx",
-									ContainerPort: 8080,
+									ContainerPort: 80,
 								},
 							},
 						},
