@@ -122,7 +122,7 @@ func (r *CustomOperatorReconciler) SetupWithManager(mgr ctrl.Manager) error {
 // createDeployment ...
 func (r *CustomOperatorReconciler) createDeployment(instance *replicav1alpha1.CustomOperator, name string, namespace string) *appsv1.Deployment {
 	replicas := &instance.Spec.Replicas
-	lables := labelsForMemcached(instance.Name)
+	lables := labelsForCustomOperator(instance.Name)
 
 	deploy := &appsv1.Deployment{
 		ObjectMeta: metav1.ObjectMeta{
@@ -163,6 +163,6 @@ func (r *CustomOperatorReconciler) createDeployment(instance *replicav1alpha1.Cu
 
 // labelsForCustomOperator returns the labels for selecting the resources
 // belonging to the given customoperator CR name.
-func labelsForMemcached(name string) map[string]string {
+func labelsForCustomOperator(name string) map[string]string {
 	return map[string]string{"app": "replicas", "customoperator_cr": name}
 }
