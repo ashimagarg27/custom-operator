@@ -15,8 +15,8 @@ limitations under the License.
 */
 
 // Package v1alpha1 contains API Schema definitions for the replica v1alpha1 API group
-//+kubebuilder:object:generate=true
-//+groupName=replica.example.com
+// +kubebuilder:object:generate=true
+// +groupName=replica.example.com
 package v1alpha1
 
 import (
