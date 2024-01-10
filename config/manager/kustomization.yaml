@@ -13,4 +13,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: ashimagarg/operator
-  newTag: "01"
+  newTag: "02"

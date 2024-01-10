@@ -43,6 +43,8 @@ type CustomOperatorReconciler struct {
 //+kubebuilder:rbac:groups=replica.example.com,resources=customoperators/status,verbs=get;update;patch
 //+kubebuilder:rbac:groups=replica.example.com,resources=customoperators/finalizers,verbs=update
 
+//+kubebuilder:rbac:groups=apps,resources=deployments,verbs=create;get;list;update;watch
+
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
 // TODO(user): Modify the Reconcile function to compare the state specified by
